@@ -30,7 +30,6 @@ loop do
     puts "No one has claimed your action, try re-wording it ..."
   elsif matched.size == 1 # we have 
     exe = matched.to_a[0]
-    puts exe[0]
     exe[1][:method].call exe[1][:match].captures
   else
     puts "found multiple matches:"
